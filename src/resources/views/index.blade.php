@@ -36,21 +36,29 @@
     <div class="todo-list">
         <div class="todo-list__header">Todo</div>
         @foreach($todos as $todo)
-        <form action="" method="post">
-            @csrf
-            <ul class="todo-list__content">
-                <li class="content-list">
+        <ul class="todo-list__content">
+            <li class="todo-list__content-item">
+                <form action="/todos/update" method="post" class="update-form">
+                    @csrf
+                    @method('patch')
                     <div class="content-list__item-input">
-                        <p class="content-list__input-text">{{$todo->content}}</p>
+                        <input class="content-list__input-text" type="text" name="content" value="{{$todo['content']}}">
+                        <input type="hidden" name="id" value="{{ $todo['id'] }}">
                     </div>
-                    <div class="content-list__item-button">
-                        <button type="submit" class="content-list__item-button-update">更新</button>
+                    <div class="content-list__item-button-update">
+                        <button type="submit" class="content-list__item-button-update-submit">更新</button>
                     </div>
-                    <div class="content-list__item-button">
-                        <button type="submit"class="content-list__item-button-delete">削除</button>
+                </form>
+                <form action="/todos/delete" method="post" class="delete-form">
+                    @csrf
+                    @method('delete')
+                    <div class="content-list__item-button-delete">
+                        <input type="hidden" name="id" value="{{$todo['id']}}">
+                        <button type="submit"class="content-list__item-button-delete-submit">削除</button>
                     </div>
-                </li>
-            </ul>
+                </form>
+            </li>
+        </ul>
         </form>
         @endforeach
     </div>
