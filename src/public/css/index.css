@@ -1,0 +1,113 @@
+.todo__content{
+    margin: 0 auto;
+}
+
+.alert__message{
+    margin: 0 auto;
+}
+
+.alert__message-success{
+    color: #0f5132;
+    background-color: #d1e7dd;
+    padding: 15px;
+}
+
+.alert__message-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    padding: 15px;
+}
+
+.create-form{
+    max-width: 1230px;
+    margin: 70px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-form__input{
+    width: 70%;
+    height: 40px;
+}
+
+.create-form__input-text{
+    width: 100%;
+    height: 40px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+}
+
+.create-form__button{
+    width: 20%;
+    height: 40px;
+}
+
+.create-form__button-submit{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.todo-list{
+    max-width: 1230px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.todo-list__header{
+    text-align: left;
+    padding: 15px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid gainsboro;
+}
+
+.todo-list__content{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.content-list{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gainsboro;
+    padding: 15px;
+}
+
+.content-list__item-input{
+    width: 70%;
+    height: 40px;
+}
+
+.content-list__input-text{
+    width: 100%;
+    height: 40px;
+    border: none;
+    text-align: left;
+}
+
+.content-list__item-button{
+    width: 5%;
+}
+
+.content-list__item-button-update{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.content-list__item-button-delete {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: none;
+}
